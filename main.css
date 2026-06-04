@@ -1,0 +1,78 @@
+/* Paleta de cores (root: raiz para definir as cores */
+:root {
+    /* Cores */
+    --green: #008000;
+    --white: #ffffff;
+    --black: #000000;
+    --purple: #b366ff;
+
+    /* O site vai sempre nascer no TEMA CLARO usando essas regras: */
+    --bg: var(--white);
+    --fontColor: var(--green); 
+    --btnBg: var(--black);       /* Fundo do botão padrão = PRETO */
+    --btnFontColor: var(--white);/* Texto do botão padrão = BRANCO */
+}
+
+/* 2. TEMA ESCURO (Só entra em ação quando ativado no JavaScript) */
+.dark_theme {
+    --bg: var(--black);
+    --fontColor: var(--purple); 
+    --btnBg: var(--white);       /* Fundo do botão no escuro = BRANCO */
+    --btnFontColor: var(--black);/* Texto do botão no escuro = PRETO */
+}
+
+/* 3. CONFIGURAÇÃO GERAL (Mantém o resto igual ao anterior) */
+body {
+    background-color: var(--bg);
+    color: var(--fontColor); 
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 2px solid var(--fontColor); 
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+li {
+    list-style: circle;
+    margin-bottom: 8px;
+}
+
+.list {
+    list-style: square;
+}
+
+.btn {
+    height: 40px;
+    width: 120px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--btnBg);
+    color: var(--btnFontColor);
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
